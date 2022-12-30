@@ -1,5 +1,5 @@
-*
-!fish/
-!nvim/
+/*
+!fish
+!nvim
 !.gitignore
 !bdatsukh.omp.json
