@@ -2,7 +2,7 @@ function tmux-sessionizer
     if [ $argv[1] ]
         echo $argv[1] | read selected
     else
-        fd . ~/binary-systems ~/personal --max-depth 2 --min-depth 2 -t d | peco --layout bottom-up --prompt 'Select SESSION:' | read selected
+        fd . ~/binary-systems ~/personal --max-depth 2 --min-depth 2 -t d | fzf | read selected
     end
 
     if not [ $selected ]

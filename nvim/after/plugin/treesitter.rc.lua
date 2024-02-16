@@ -1,16 +1,16 @@
-local status, ts = pcall(require, "nvim-treesitter.configs")
+local status, treesitter = pcall(require, "nvim-treesitter.configs")
 if (not status) then return end
 
-ts.setup {
+treesitter.setup {
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
     },
     indent = {
         enable = true,
-        disable = {},
     },
     sync_install = false,
+    auto_install = false,
     ensure_installed = {
         -- "help",
         "markdown",
@@ -30,10 +30,34 @@ ts.setup {
         "typescript",
         "javascript",
         "prisma",
-        "svelte",
     },
     autotag = {
         enable = true,
+    },
+    textobjects = {
+        select = {
+            enable = true,
+            keymaps = {
+                ["af"] = "@function.outer",
+                ["if"] = "@function.inner",
+                ["ac"] = "@class.outer",
+                ["ic"] = "@class.inner",
+            },
+            include_surrounding_whitespace = false,
+        },
+        move = {
+            enable = true,
+            set_jumps = true,
+            goto_next_start = {
+                ["<Space>j"] = "@function.outer",
+            },
+            goto_previous_start = {
+                ["<Space>k"] = "@function.outer",
+            },
+        },
+        swap = {
+            enable = false
+        },
     },
 }
 

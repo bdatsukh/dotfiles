@@ -40,5 +40,6 @@ set -x PATH $PATH $GOPATH/bin
 # oh-my-posh init --config ~/.config/omf/poison.omp.json fish | source
 # oh-my-posh init --config ~/.config/omf/tokyonight.omp.json fish | source
 oh-my-posh init --config ~/.config/omf/dracula.omp.json fish | source
+zoxide init fish | source
 
 set -gx EDITOR nvim

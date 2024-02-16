@@ -1,13 +1,15 @@
 function fish_user_key_bindings
     # peco
-    bind \cr peco_select_history # Bind for peco select history to Ctrl+R
+    # bind \cr fzf_select_history # Bind for peco select history to Ctrl+R
 
     # prevent iterm2 from closing when typing Ctrl-D (EOF)
-    bind \cd delete-char
+    # bind \cd delete-char
 
-    # tmux-sessionizer
+    # # tmux-sessionizer
     bind \cf tmux-sessionizer
-
-    # last-session
+    #
+    # # last-session
     bind \cg tmux-last-session
 end
+
+fzf_key_bindings

@@ -5,9 +5,9 @@ function tmux-last-session
         tmux-sessionizer
     else
         if not [ $TMUX ]
-            tmux attach
+            tmux attach &>/dev/null
         else
-            tmux switch-client -l
+            tmux switch-client -l &>/dev/null
         end
     end
 end
