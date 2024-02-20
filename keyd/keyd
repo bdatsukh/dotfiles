@@ -1,0 +1,17 @@
+[ids]
+*
+
+[main]
+rightshift = capslock
+capslock = overload(capslock, esc)
+esc = `
+pageup = end
+
+[capslock:C]
+h = left
+k = up
+j = down
+l = right
+
+[capslock:C]
+[ = esc
