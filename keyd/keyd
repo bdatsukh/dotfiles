@@ -2,7 +2,6 @@
 *
 
 [main]
-rightshift = capslock
 capslock = overload(capslock, esc)
 esc = `
 pageup = end
@@ -15,3 +14,7 @@ l = right
 
 [capslock:C]
 [ = esc
+
+[shift]
+rightshift = capslock
+leftshift = capslock

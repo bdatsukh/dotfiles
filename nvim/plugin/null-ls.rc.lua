@@ -34,8 +34,8 @@ null_ls.setup {
         --     return { "--edition=2021" }
         --   end,
         -- }),
-        -- null_ls.builtins.diagnostics.fish,
-        -- null_ls.builtins.formatting.fish_indent,
+        null_ls.builtins.diagnostics.fish,
+        null_ls.builtins.formatting.fish_indent,
     },
     on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then

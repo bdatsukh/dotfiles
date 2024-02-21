@@ -17,6 +17,8 @@ font pango:JetBrainsMono Nerd Font 10
 # exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec_always --no-startup-id feh --bg-scale /home/bdatsukh/Pictures/yayayayayaya.jpg
 
+exec_always "setxkbmap -model pc104 -layout us,mn -variant ,, -option grp:alt_shift_toggle"
+
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A

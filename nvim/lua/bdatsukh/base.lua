@@ -1,7 +1,8 @@
 vim.cmd("autocmd!")
 
 -- vim.opt.guicursor = '' -- cursor block for all mode
-vim.opt.mouse = nil
+
+vim.opt.mouse = ""
 
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
@@ -22,7 +23,7 @@ vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
 vim.opt.expandtab = true
 vim.opt.scrolloff = 5
-vim.opt.shell = 'zsh'
+vim.opt.shell = 'fish'
 vim.opt.backupskip = { '/tmp/*', '/private/tmp/*' }
 vim.opt.inccommand = 'split'
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
