@@ -16,16 +16,17 @@ command -qv lazygit && alias g lazygit
 
 fish_config theme choose dracula
 
+set -gx EDITOR nvim
+set -gx NVM_DIR $HOME/.nvm
 set -gx GOROOT /usr/local/go
 set -gx GOPATH $HOME/go
 set -gx PATH $PATH $GOROOT/bin $GOPATH/bin
-set -gx EDITOR vim
-set -gx NVM_DIR $HOME/.nvm
 
 # nvm
 function nvm
     bass source $NVM_DIR/nvm.sh --no-use ';' nvm $argv
 end
+
 # NVM
 function __check_rvm --on-variable PWD --description 'Do nvm stuff'
     status --is-command-substitution; and return

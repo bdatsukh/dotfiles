@@ -48,7 +48,7 @@ telescope.setup {
     },
 }
 
-telescope.load_extension("file_browser")
+telescope.load_extension "file_browser"
 
 -- vim.keymap.set('n', '<leader>f', function()
 --   builtin.git_files()
@@ -79,6 +79,9 @@ end)
 vim.keymap.set('n', '<leader>e', function()
     builtin.diagnostics()
 end)
+vim.keymap.set('n', '<leader>\'', function()
+    builtin.registers()
+end)
 vim.keymap.set("n", "<leader>b", function()
     telescope.extensions.file_browser.file_browser({
         path = "%:p:h",
@@ -86,6 +89,7 @@ vim.keymap.set("n", "<leader>b", function()
         respect_gitignore = false,
         hidden = true,
         grouped = true,
+        select_buffer = true,
         previewer = false,
         initial_mode = "normal",
         layout_config = { height = 40 }

@@ -72,39 +72,85 @@
 
 local dracula = require 'dracula'
 
-function Custom(c)
-    return {
-        TelescopeResultsNormal = { bg = 'NONE' },
-        TelescopePreviewNormal = { bg = 'NONE' },
-        TelescopeTitle         = { fg = c.pink, bg = 'NONE' },
-        TelescopeBorder        = { bg = 'NONE', fg = c.comment },
-        TelescopePromptPrefix  = { fg = c.pink },
-        TelescopePromptNormal  = { bg = 'NONE' },
-        TelescopePromptCounter = { fg = c.pink },
+-- function Custom(c)
+--     return {
+--         TelescopeResultsNormal = { bg = 'NONE' },
+--         TelescopePreviewNormal = { bg = 'NONE' },
+--         TelescopeTitle         = { fg = c.pink, bg = 'NONE' },
+--         TelescopeBorder        = { bg = 'NONE', fg = c.comment },
+--         TelescopePromptPrefix  = { fg = c.pink },
+--         TelescopePromptNormal  = { bg = 'NONE' },
+--         TelescopePromptCounter = { fg = c.pink },
+--
+--         SagaNormal             = { bg = 'NONE' },
+--         SagaBorder             = { bg = 'NONE', fg = c.comment },
+--
+--         WinSeparator           = { bg = 'NONE' },
+--         FloatBorder            = { bg = 'NONE', fg = c.comment },
+--         NormalFloat            = { bg = 'NONE' },
+--
+--         --         BufferLineFill         = { bg = 'NONE' },
+--         --         BufferLineTabSelected  = { bg = c.bgdark, fg = c.pink },
+--         --         BufferLineSeparator    = { bg = 'NONE' },
+--
+--         FoldColumn             = { bg = 'NONE', fg = c.comment },
+--     }
+-- end
 
-        SagaNormal             = { bg = 'NONE' },
-        SagaBorder             = { bg = 'NONE', fg = c.comment },
+-- dracula.setup {
+--     soft = true,
+--     transparent = true,
+--     saturation = {
+--         enabled = false,
+--         -- amount = 10,
+--     },
+--     -- override = Custom,
+-- }
 
-        WinSeparator           = { bg = 'NONE' },
-        FloatBorder            = { bg = 'NONE', fg = c.comment },
-        NormalFloat            = { bg = 'NONE' },
-
-        --         BufferLineFill         = { bg = 'NONE' },
-        --         BufferLineTabSelected  = { bg = c.bgdark, fg = c.pink },
-        --         BufferLineSeparator    = { bg = 'NONE' },
-
-        FoldColumn             = { bg = 'NONE', fg = c.comment },
-    }
-end
-
-dracula.setup {
-    soft = true,
+dracula.setup({
     transparent = true,
-    saturation = {
-        enabled = false,
-        -- amount = 10,
-    },
-    override = Custom,
-}
+    on_colors = function(colors, color)
+        ---@type dracula.palette
+        return {}
+    end,
+    on_highlights = function(c, color)
+        ---@type dracula.highlights
+        return {
+            --@type vim.api.keyset.highlight
+            TelescopeResultsNormal = { bg = 'NONE' },
+            TelescopePreviewNormal = { bg = 'NONE' },
+            TelescopeTitle         = { fg = c.purple, bg = 'NONE' },
+            TelescopeBorder        = { bg = 'NONE', fg = c.base01 },
+            TelescopePromptPrefix  = { fg = c.purple },
+            TelescopePromptNormal  = { bg = 'NONE' },
+            TelescopePromptCounter = { fg = c.purple },
 
-vim.cmd.colorscheme 'dracula'
+            SagaNormal             = { bg = 'NONE' },
+            SagaBorder             = { bg = 'NONE', fg = c.base01 },
+
+            WinSeparator           = { bg = 'NONE' },
+            FloatBorder            = { bg = 'NONE', fg = c.base01 },
+            NormalFloat            = { bg = 'NONE' },
+
+
+            -- BufferLineFill         = { bg = 'NONE' },
+            -- BufferLineTabSelected  = { bg = c.base03, fg = c.base01 },
+            -- BufferLineSeparator    = { bg = 'NONE' },
+
+            FoldColumn = { bg = 'NONE', fg = c.base01 },
+        }
+    end,
+    plugins = {
+        -- ["nvim-treesitter"] = true,
+        -- ["nvim-lspconfig"] = true,
+        -- ["nvim-cmp"] = true,
+        -- ["bufferline.nvim"] = true,
+        -- ["nvim-tree.lua"] = true,
+        -- ["gitsigns.nvim"] = true,
+        -- ["todo-comments.nvim"] = true,
+        -- ["lazy.nvim"] = true,
+        -- ["telescope.nvim"] = true,
+    }
+})
+
+vim.cmd.colorscheme 'dracula-soft'
