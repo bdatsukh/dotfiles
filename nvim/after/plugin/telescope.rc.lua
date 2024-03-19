@@ -11,6 +11,9 @@ local fb_actions = require "telescope".extensions.file_browser.actions
 
 telescope.setup {
     defaults = {
+        file_ignore_patterns = {
+            ".git/",
+        },
         mappings = {
             n = {
                 ["q"] = actions.close,
@@ -53,6 +56,14 @@ telescope.load_extension "file_browser"
 -- vim.keymap.set('n', '<leader>f', function()
 --   builtin.git_files()
 -- end)
+
+vim.keymap.set('n', "<leader>F",
+    function()
+        builtin.find_files({
+            no_ignore = true,
+            hidden = true,
+        })
+    end)
 
 vim.keymap.set('n', "<leader>f",
     function()

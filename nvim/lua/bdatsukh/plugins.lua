@@ -37,6 +37,7 @@ packer.startup({
         }
         use 'folke/tokyonight.nvim'
         use 'maxmx03/dracula.nvim'
+        use { "rose-pine/neovim", as = "rose-pine" }
 
         use 'nvim-lualine/lualine.nvim' -- Statusline
 
