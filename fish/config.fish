@@ -14,7 +14,7 @@ command -qv nvim && alias vim nvim
 command -qv bat && alias cat batcat
 command -qv lazygit && alias g lazygit
 
-fish_config theme choose tokyonight
+fish_config theme choose dracula
 
 set -gx EDITOR nvim
 set -gx NVM_DIR $HOME/.nvm
@@ -37,6 +37,6 @@ function __check_rvm --on-variable PWD --description 'Do nvm stuff'
     end
 end
 
-# oh-my-posh --config $HOME/.config/omp/dracula.omp.json init fish | source
-oh-my-posh --config $HOME/.config/omp/tokyonight.omp.json init fish | source
+oh-my-posh --config $HOME/.config/omp/dracula.omp.json init fish | source
+# oh-my-posh --config $HOME/.config/omp/tokyonight.omp.json init fish | source
 zoxide init fish | source

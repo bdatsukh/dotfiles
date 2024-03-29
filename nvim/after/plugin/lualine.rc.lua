@@ -5,8 +5,8 @@ lualine.setup {
     options = {
         icons_enabled = true,
         -- theme = 'solarized_dark',
-        theme = 'tokyonight',
-        -- theme = 'dracula',
+        -- theme = 'tokyonight',
+        theme = 'dracula',
         -- theme = 'palenight',
         section_separators = { left = '', right = '' },
         component_separators = { left = '', right = '' },

@@ -2,13 +2,15 @@ local keymap = vim.keymap
 vim.g.mapleader = ';'
 
 -- keymap.set("i", "jk", "<ESC>")
+--
 
 keymap.set('i', '<C-e>', '<C-x><C-e>')
 keymap.set('i', '<C-y>', '<C-x><C-y>')
 
 -- Increment/decrement
-keymap.set('n', '+', '<C-a>')
-keymap.set('n', '-', '<C-x>')
+-- keymap.set('n', '+', '<C-a>')
+-- keymap.set('n', '-', '<C-x>')
+-- Increment
 
 -- New tab
 keymap.set('n', '<C-t>', ':tabedit<CR>')

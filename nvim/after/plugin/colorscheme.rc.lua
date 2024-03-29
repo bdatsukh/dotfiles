@@ -67,7 +67,6 @@ require('tokyonight').setup {
         hl.FoldColumn            = { bg = 'NONE', fg = c.comment }
     end,
 }
-vim.cmd.colorscheme "tokyonight-night"
 
 local dracula = require 'dracula'
 dracula.setup({
@@ -115,7 +114,6 @@ dracula.setup({
         -- ["telescope.nvim"] = true,
     }
 })
--- vim.cmd.colorscheme 'dracula-soft'
 
 require("rose-pine").setup({
     variant = "moon",      -- auto, main, moon, or dawn
@@ -182,4 +180,7 @@ require("rose-pine").setup({
         -- end
     end,
 })
--- vim.cmd("colorscheme rose-pine")
+
+-- vim.cmd.colorscheme 'rose-pine'
+vim.cmd.colorscheme 'dracula'
+-- vim.cmd.colorscheme "tokyonight"

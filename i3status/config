@@ -48,12 +48,12 @@ tztime local {
     format = " %Y-%m-%d  %H:%M:%S"
 }
 
-load {
-    format = " %1min"
-}
-
 cpu_usage {
     format = " %usage"
+}
+
+load {
+    format = " %1min"
 }
 
 cpu_temperature 0 {
