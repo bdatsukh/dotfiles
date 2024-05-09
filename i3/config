@@ -14,14 +14,15 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:JetBrainsMono Nerd Font 10
 
+exec ~/.screenlayout/default.sh
 exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf -b
 
-# exec_always --no-startup-id feh --bg-scale $HOME/Pictures/blue.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/Pictures/blue.jpg
 # exec_always --no-startup-id feh --bg-scale $HOME/Pictures/green.jpg
 # exec_always --no-startup-id feh --bg-scale $HOME/Pictures/purple.jpg
-exec_always --no-startup-id feh --bg-center $HOME/Pictures/eyes.jpg
+# exec_always --no-startup-id feh --bg-center $HOME/Pictures/eyes.jpg
 
-exec_always "setxkbmap -model pc104 -layout us,mn -variant ,, -option grp:alt_shift_toggle"
+exec_always "setxkbmap -model pc104 -layout us,mn -variant ,, -option grp:ctrl_alt_toggle"
 
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
@@ -205,6 +206,7 @@ for_window [class="^.*"] border pixel 1
 # finds out, if available)
 bar {
     position bottom
+    # status_command ~/.config/i3status/i3status.sh
     status_command i3status
     
     colors {

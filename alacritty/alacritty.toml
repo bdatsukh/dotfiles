@@ -114,7 +114,7 @@ multiplier = 3
 
 [window]
 dynamic_padding = true
-opacity = 0.8
+opacity = 1
 blur = false
 decorations = "Full"
 title = "Alacritty"

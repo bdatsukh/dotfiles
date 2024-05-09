@@ -2,7 +2,7 @@
 -- if (not status) then return end
 --
 -- n.setup({
---   comment_italics = true,
+--     comment_italics = true,
 -- })
 --
 -- local cb = require('colorbuddy.init')
@@ -95,11 +95,11 @@ dracula.setup({
             NormalFloat            = { bg = 'NONE' },
 
 
-            -- BufferLineFill         = { bg = 'NONE' },
-            -- BufferLineTabSelected  = { bg = c.base03, fg = c.base01 },
-            -- BufferLineSeparator    = { bg = 'NONE' },
+            BufferLineFill        = { bg = 'NONE' },
+            BufferLineTabSelected = { bg = c.base03, fg = c.base01 },
+            BufferLineSeparator   = { bg = 'NONE' },
 
-            FoldColumn = { bg = 'NONE', fg = c.base01 },
+            FoldColumn            = { bg = 'NONE', fg = c.base01 },
         }
     end,
     plugins = {

@@ -99,7 +99,7 @@ packer.startup({
         use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
         use "luukvbaal/statuscol.nvim"
 
-        use "github/copilot.vim"
+        -- use "github/copilot.vim"
 
         if packer_bootstrap then
             require('packer').sync()
