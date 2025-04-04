@@ -5,7 +5,8 @@
 !i3status
 !keyd
 !nvim
-!nvim-lazy
+!nvim-packer
+!nvim-lazyvim
 !omp
 !picom
 !tmux
